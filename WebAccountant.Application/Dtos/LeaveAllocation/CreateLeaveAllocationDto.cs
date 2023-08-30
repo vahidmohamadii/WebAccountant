@@ -1,14 +1,13 @@
 ﻿
 
+
 using WebAccountant.Application.Dtos.Common;
-using WebAccountant.Domain;
 
-namespace WebAccountant.Application.Dtos;
+namespace WebAccountant.Application.Dtos.LeaveAllocation;
 
-public class LeaveAllocationDto:BaseDto
+public class CreateLeaveAllocationDto:BaseDto
 {
     public int NumberOfDays { get; set; }
-    public LeaveTypeDto LeaveType { get; set; }
     public int LeaveTypeId { get; set; }
     public int Priod { get; set; }
 }

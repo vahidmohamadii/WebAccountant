@@ -3,7 +3,7 @@
 
 using AutoMapper;
 using MediatR;
-using WebAccountant.Application.Dtos;
+using WebAccountant.Application.Dtos.LeaveAllocation;
 using WebAccountant.Application.Features.LeaveAllocation.Request.Queries;
 using WebAccountant.Application.Persistence.Contracts.EntityRepository;
 

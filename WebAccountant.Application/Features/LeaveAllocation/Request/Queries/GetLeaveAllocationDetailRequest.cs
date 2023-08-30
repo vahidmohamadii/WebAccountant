@@ -1,7 +1,7 @@
 ﻿
 
 using MediatR;
-using WebAccountant.Application.Dtos;
+using WebAccountant.Application.Dtos.LeaveAllocation;
 
 namespace WebAccountant.Application.Features.LeaveAllocation.Request.Queries;
 

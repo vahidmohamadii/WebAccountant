@@ -5,7 +5,7 @@ using WebAccountant.Application.Dtos.LeaveType;
 
 namespace WebAccountant.Application.Features.LeaveType.Request.Command;
 
-public class AddLeaveTypeRequest : IRequest<int>
+public class UpdateLeaveTypeRequest:IRequest<Unit>
 {
     public LeaveTypeDto LeaveTypeDto { get; set; }
 }

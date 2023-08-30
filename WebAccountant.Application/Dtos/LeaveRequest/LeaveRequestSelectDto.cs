@@ -1,4 +1,6 @@
 ﻿
+using WebAccountant.Application.Dtos.LeaveType;
+
 namespace WebAccountant.Application.Dtos.LeaveRequest;
 
 public class LeaveRequestSelectDto
