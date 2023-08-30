@@ -7,5 +7,5 @@ namespace WebAccountant.Application.Features.LeaveType.Request.Command;
 
 public class UpdateLeaveTypeRequest:IRequest<Unit>
 {
-    public LeaveTypeDto LeaveTypeDto { get; set; }
+    public UpdateLeaveTypeDto UpdateLeaveTypeDto { get; set; }
 }

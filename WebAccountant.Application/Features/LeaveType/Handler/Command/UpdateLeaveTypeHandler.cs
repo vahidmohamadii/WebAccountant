@@ -2,6 +2,7 @@
 
 using AutoMapper;
 using MediatR;
+using WebAccountant.Application.Dtos.LeaveType.Validator;
 using WebAccountant.Application.Features.LeaveType.Request.Command;
 using WebAccountant.Application.Persistence.Contracts.EntityRepository;
 
@@ -20,8 +21,12 @@ public class UpdateLeaveTypeHandler : IRequestHandler<UpdateLeaveTypeRequest, Un
 
     public async Task<Unit> Handle(UpdateLeaveTypeRequest request, CancellationToken cancellationToken)
     {
-        var leavetype =await _leaveType.GetById(request.LeaveTypeDto.Id);
-        _mapper.Map(request.LeaveTypeDto, leavetype);
+        var validator = new UpdateLeaveTypeValidator();
+        var Validation = await validator.ValidateAsync(request.UpdateLeaveTypeDto);
+        if (Validation.IsValid == false) { throw new Exception(); }
+
+        var leavetype =await _leaveType.GetById(request.UpdateLeaveTypeDto.Id);
+        _mapper.Map(request.UpdateLeaveTypeDto, leavetype);
         await _leaveType.Update(leavetype);
         return Unit.Value;
     }

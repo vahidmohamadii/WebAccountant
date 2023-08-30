@@ -1,10 +1,8 @@
 ﻿
 
-using WebAccountant.Application.Dtos.LeaveRequest.DtoInterface;
+namespace WebAccountant.Application.Dtos.LeaveRequest.DtoInterface;
 
-namespace WebAccountant.Application.Dtos.LeaveRequest;
-
-public class CreateLeaveRequestDto:IleaveRequestDto
+public interface IleaveRequestDto
 {
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
