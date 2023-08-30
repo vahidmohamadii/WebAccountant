@@ -15,10 +15,4 @@
     <ProjectReference Include="..\WebAccountant.Domain\WebAccountant.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\LeaveAllocation\Handler\Command\" />
-    <Folder Include="Features\LeaveRequest\Handler\Command\" />
-    <Folder Include="Features\LeaveType\Handler\Command\" />
-  </ItemGroup>
-
 </Project>
