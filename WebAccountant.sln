@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAccountant.Domain", "Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAccountant.Application", "WebAccountant.Application\WebAccountant.Application.csproj", "{1257564D-6BCF-4ECB-8934-6E195C347C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Infrastructure", "Infrastructure.Application\WebAccountant.Infrastructure.csproj", "{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAccountant.Infrastructure", "Infrastructure.Application\WebAccountant.Infrastructure.csproj", "{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Persistence", "WebAccountant.Persistence\WebAccountant.Persistence.csproj", "{FD2E875A-55CE-4292-8811-CB7C7D92D11C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAccountant.Persistence", "WebAccountant.Persistence\WebAccountant.Persistence.csproj", "{FD2E875A-55CE-4292-8811-CB7C7D92D11C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Api", "WebAccountant.Api\WebAccountant.Api.csproj", "{32A8CC5B-E8FF-4015-B404-C8F3C13C23C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A8CC5B-E8FF-4015-B404-C8F3C13C23C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A8CC5B-E8FF-4015-B404-C8F3C13C23C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A8CC5B-E8FF-4015-B404-C8F3C13C23C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A8CC5B-E8FF-4015-B404-C8F3C13C23C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{1257564D-6BCF-4ECB-8934-6E195C347C58} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
 		{FE0E7E6B-7D95-45FD-AE77-5206A99F748A} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
 		{FD2E875A-55CE-4292-8811-CB7C7D92D11C} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
+		{32A8CC5B-E8FF-4015-B404-C8F3C13C23C8} = {126B1CF2-C075-4F29-9A3A-9779014ECDD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F6E83EB-05D8-4642-9EB3-2130A5D294FE}
