@@ -4,11 +4,11 @@ using MediatR;
 using WebAccountant.Application.Dtos.LeaveAllocation.Validator;
 using WebAccountant.Application.Features.LeaveAllocation.Request.Command;
 using WebAccountant.Application.Persistence.Contracts.EntityRepository;
-using WebAccountant.Domain;
+using WebAccountant.Application.Response;
 
 namespace WebAccountant.Application.Features.LeaveAllocation.Handler.Command;
 
-public class AddLeaveAllocationHandler : IRequestHandler<AddLeaveAllocationRequest, int>
+public class AddLeaveAllocationHandler : IRequestHandler<AddLeaveAllocationRequest, BaseCommandResponse>
 {
     private readonly ILeaveAllocation _leaveAllocation;
     private readonly ILeaveType _leaveType;
@@ -21,14 +21,26 @@ public class AddLeaveAllocationHandler : IRequestHandler<AddLeaveAllocationReque
         _mapper = mapper;
     }
 
-    public async Task<int> Handle(AddLeaveAllocationRequest request, CancellationToken cancellationToken)
+    public async Task<BaseCommandResponse> Handle(AddLeaveAllocationRequest request, CancellationToken cancellationToken)
     {
+        var response = new BaseCommandResponse();
+
         var validator = new CreateLeaveAllocationValidator(_leaveType);
         var Validation = await validator.ValidateAsync(request.CreateLeaveAllocationDto);
-        if (Validation.IsValid == false) {  throw new Exception(); }
+        if (Validation.IsValid == false) 
+        {
+            response.IsSucsess=false;
+            response.Message = "Not ok";
+            response.Errors=Validation.Errors.Select(e=>e.ErrorMessage).ToList();
+        }
 
         var leaveAllocation = _mapper.Map<Domain.LeaveAllocation>(request.CreateLeaveAllocationDto);
         var res = await _leaveAllocation.Add(leaveAllocation);
-        return res.Id;
+
+        response.IsSucsess= true;
+        response.Message = "Ok";
+        response.Id= res.Id;
+
+        return response;
     }
 }

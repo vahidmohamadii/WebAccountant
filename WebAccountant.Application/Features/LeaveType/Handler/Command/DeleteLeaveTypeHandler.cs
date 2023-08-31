@@ -1,5 +1,6 @@
 ﻿
 using MediatR;
+using WebAccountant.Application.Exception;
 using WebAccountant.Application.Features.LeaveType.Request.Command;
 using WebAccountant.Application.Persistence.Contracts.EntityRepository;
 
@@ -16,7 +17,12 @@ public class DeleteLeaveTypeHandler : IRequestHandler<DeleteLeaveTypeRequest, Un
     public async Task<Unit> Handle(DeleteLeaveTypeRequest request, CancellationToken cancellationToken)
     {
 
-        await _leaveType.DeleteById(request.Id);
+        var leavetype= await _leaveType.GetById(request.Id);
+        if(leavetype == null) 
+        {
+           throw new NotFoundException(leavetype.Name,request.Id.ToString());
+        }
+        await _leaveType.Delete(leavetype);
         return Unit.Value;
     }
 }

@@ -27,7 +27,7 @@ public class AddLeaveRequestHandler : IRequestHandler<AddLeaveRequestRequest, in
     {
         var validator = new CreateLeaveRequestValidator(_leaveType);
         var Validation = await validator.ValidateAsync(request.CreateLeaveRequestDto);
-        if (Validation.IsValid == false) { throw new Exception(); }
+        if (Validation.IsValid == false) {}
 
         var leaveRequest = _mapper.Map<Domain.LeaveRequest>(request.CreateLeaveRequestDto);
         var res = await _leaveRequest.Add(leaveRequest);

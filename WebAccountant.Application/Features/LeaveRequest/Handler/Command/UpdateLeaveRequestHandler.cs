@@ -27,7 +27,7 @@ public class UpdateLeaveRequestHandler : IRequestHandler<UpdateLeaveRequestReque
 
         var validator = new UpdateLeaveRequestValidator(_leaveType);
         var Validation = await validator.ValidateAsync(request.UpdateLeaveRequestDto);
-        if (Validation.IsValid == false) { throw new Exception(); }
+        if (Validation.IsValid == false) {  }
 
         var LeaveRequest = await _leaveRequest.GetById(request.Id);
         if(request.UpdateLeaveRequestDto== null) 
