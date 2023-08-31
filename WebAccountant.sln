@@ -15,9 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{938D5AA5-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DF18631D-D191-4CEC-AA91-0ADFB9585B8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Domain", "WebAccountant.Domain\WebAccountant.Domain.csproj", "{2AAE7E3B-82F7-4E8B-BFEB-D5EC5DB65663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAccountant.Domain", "WebAccountant.Domain\WebAccountant.Domain.csproj", "{2AAE7E3B-82F7-4E8B-BFEB-D5EC5DB65663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Application", "WebAccountant.Application\WebAccountant.Application.csproj", "{1257564D-6BCF-4ECB-8934-6E195C347C58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAccountant.Application", "WebAccountant.Application\WebAccountant.Application.csproj", "{1257564D-6BCF-4ECB-8934-6E195C347C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Infrastructure", "Infrastructure.Application\WebAccountant.Infrastructure.csproj", "{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAccountant.Persistence", "WebAccountant.Persistence\WebAccountant.Persistence.csproj", "{FD2E875A-55CE-4292-8811-CB7C7D92D11C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{1257564D-6BCF-4ECB-8934-6E195C347C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1257564D-6BCF-4ECB-8934-6E195C347C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1257564D-6BCF-4ECB-8934-6E195C347C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0E7E6B-7D95-45FD-AE77-5206A99F748A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2E875A-55CE-4292-8811-CB7C7D92D11C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +56,8 @@ Global
 		{938D5AA5-D2DE-4A55-8525-5D4DECF30AE6} = {20F0DE91-E4ED-4D16-8B14-49A62AF9B0C5}
 		{2AAE7E3B-82F7-4E8B-BFEB-D5EC5DB65663} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
 		{1257564D-6BCF-4ECB-8934-6E195C347C58} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
+		{FE0E7E6B-7D95-45FD-AE77-5206A99F748A} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
+		{FD2E875A-55CE-4292-8811-CB7C7D92D11C} = {938D5AA5-D2DE-4A55-8525-5D4DECF30AE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F6E83EB-05D8-4642-9EB3-2130A5D294FE}
