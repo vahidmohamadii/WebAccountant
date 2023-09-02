@@ -5,6 +5,7 @@ using MediatR;
 using WebAccountant.Application.Dtos.LeaveRequest.Validator;
 using WebAccountant.Application.Features.LeaveRequest.Request.Command;
 using WebAccountant.Application.Persistence.Contracts.EntityRepository;
+using WebAccountant.Application.Response;
 using WebAccountant.Domain;
 
 namespace WebAccountant.Application.Features.LeaveRequest.Handler.Command;
@@ -24,10 +25,17 @@ public class UpdateLeaveRequestHandler : IRequestHandler<UpdateLeaveRequestReque
 
     public async Task<Unit> Handle(UpdateLeaveRequestRequest request, CancellationToken cancellationToken)
     {
+        var response = new BaseCommandResponse();
 
         var validator = new UpdateLeaveRequestValidator(_leaveType);
         var Validation = await validator.ValidateAsync(request.UpdateLeaveRequestDto);
-        if (Validation.IsValid == false) {  }
+        if (Validation.IsValid == false)
+        {
+            response.IsSucsess = false;
+            response.Message = "Not ok";
+            response.Errors = Validation.Errors.Select(x => x.ErrorMessage).ToList();
+
+        }
 
         var LeaveRequest = await _leaveRequest.GetById(request.Id);
         if(request.UpdateLeaveRequestDto== null) 

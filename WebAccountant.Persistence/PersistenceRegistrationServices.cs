@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebAccountant.Application.Persistence.Contracts;
 using WebAccountant.Application.Persistence.Contracts.EntityRepository;
-using WebAccountant.Domain;
 using WebAccountant.Persistence.Repository;
 using WebAccountant.Persistence.Repository.GenericRepository;
 
