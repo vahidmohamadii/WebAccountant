@@ -10,5 +10,6 @@ public static class ApplicationRegistrationServices
     public static void ConfigureApplicationRegistration(this IServiceCollection services)
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        services.AddMediatR(c=>c.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
     }
 }
